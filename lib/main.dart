@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,21 +38,52 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: const Center(
-        child: Card(
-          color: Colors.green,
-          elevation: 12,
-          shadowColor: Colors.green,
-          child: Padding(
-            padding: EdgeInsets.all(15),
-            child: Text(
-              'Card Widget',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Card(
+              color: Colors.green,
+              elevation: 12,
+              shadowColor: Colors.green,
+              child: Padding(
+                padding: EdgeInsets.all(15),
+                child: Text(
+                  'Card Widget',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ),
-          ),
+            SizedBox(
+              height: 30,
+            ),
+            SizedBox(
+              height: 150,
+              width: 150,
+              child: Card(
+                color: Colors.red,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                elevation: 15,
+                margin: EdgeInsets.all(20),
+                child: Text(
+                  'Card Widget',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
